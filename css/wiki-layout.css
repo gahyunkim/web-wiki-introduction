@@ -98,7 +98,7 @@ aside h2 {
 }
 
 .profile-image {
-  background-image: url("https://images.unsplash.com/photo-1618979251882-0b40ef3617f0?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("/images/joy.jpeg");
   background-size: 100%;
   background-position: center 100%;
   width: var(--aside-width);
@@ -153,18 +153,6 @@ footer p {
   --font-default-color: #333;
 }
 
-/* 명언 리스트 스타일 */
-ol.quote-list {
-  list-style-type: decimal; /* 숫자 리스트 */
-  padding-left: 24px; /* 리스트 들여쓰기 */
-  margin-top: 16px;
-}
-
-ol.quote-list li {
-  line-height: 1.6;
-  margin-bottom: 8px; /* 각 리스트 간 간격 */
-}
-
 .photo-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3열 구조 */
@@ -190,4 +178,54 @@ ol.quote-list li {
   height: 100%;
   object-fit: cover; /* 사진 비율 유지하면서 꽉 채우기 */
   border-radius: 8px; /* 모서리를 둥글게 */
+}
+
+/* 📌 book-container를 가로 2열 배치 */
+.book-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2개의 article을 동일한 크기로 나누기 */
+  gap: 20px; /* article 간의 간격 */
+  max-width: 100%; /* 전체 너비 제한 */
+}
+
+/* 각 article의 스타일 */
+.book-container article {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* 이미지 정렬 */
+.book-container .thumbnail {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.book-container .thumbnail img {
+  width: 100%; /* 이미지가 부모 요소에 맞게 커지도록 */
+  max-width: 200px; /* 최대 크기 제한 */
+}
+
+/* 명언 리스트 스타일 */
+.book-container .quote-list {
+  background: rgba(211, 211, 211, 0.5);
+  list-style-type: none; /* 리스트 스타일 없애기 */
+  padding-left: 0;
+}
+
+.book-container .quote-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* 하이픈 스타일 */
+.book-container .quote-list li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  color: var(--font-default-color);
 }
