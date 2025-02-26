@@ -152,3 +152,16 @@ footer p {
   --divider-color: #efefef;
   --font-default-color: #333;
 }
+
+/* 명언 리스트 스타일 */
+ol.quote-list {
+  list-style-type: decimal; /* 숫자 리스트 */
+  padding-left: 24px; /* 리스트 들여쓰기 */
+  margin-top: 16px;
+}
+
+ol.quote-list li {
+  line-height: 1.6;
+  margin-bottom: 8px; /* 각 리스트 간 간격 */
+}
+
